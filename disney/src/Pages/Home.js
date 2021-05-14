@@ -1,12 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 import SlideShow from '../HomeComps/SlideShow'
+import ProductComp from '../HomeComps/ProductComp'
 
 const Home = (props) => {
   return (
     <Wrapper>
 
 <SlideShow/>
+<ProductComp/>
     </Wrapper>
 
 
