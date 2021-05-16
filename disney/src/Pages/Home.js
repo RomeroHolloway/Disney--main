@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import SlideShow from '../HomeComps/SlideShow'
 import ProductComp from '../HomeComps/ProductComp'
+import Recommend from '../HomeComps/recommended'
 
 const Home = (props) => {
   return (
@@ -9,6 +10,8 @@ const Home = (props) => {
 
 <SlideShow/>
 <ProductComp/>
+<Recommend/>
+
     </Wrapper>
 
 
