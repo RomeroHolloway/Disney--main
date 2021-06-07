@@ -1,14 +1,14 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { selectNewDisney } from "../features/movies/movieSlice";
+import { selectOriginal } from "../features/movies/movieSlice";
 
 const Originals = (props) => {
-  const movies = useSelector(selectNewDisney);
+  const movies = useSelector(selectOriginal);
 
   return (
     <Wrapper>
-      <h4>New to Disney+</h4>
+      <h4>Originals</h4>
       <WrapperContent>
         {movies &&
           movies.map((movie, key) => (

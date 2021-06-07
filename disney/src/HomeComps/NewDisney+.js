@@ -1,61 +1,33 @@
 import React from 'react';
 import styled from 'styled-components';
 import {Link} from "react-router-dom";
+import { useSelector } from "react-redux";
+import {selectNewDisney} from '../features/movies/movieSlice'
 
 
 
 const NewDisney = (props) => {
+  const movies = useSelector(selectNewDisney);
+
   return (
-
     <Wrapper>
-
-<h3>New to Disney+</h3>
-
-<WrapperContent>
-
-<Wrap>
-
-<Link to="/">
-  <img src='https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/3B4A75F38E50D3A56E8F72616F1C854FCFD1BB5F5930BDEF05AD270651FDD704/scale?width=400&aspectRatio=1.78&format=jpeg'/>
-
-</Link>
-
-</Wrap>
-<Wrap>
-
-<Link to="/">
-  <img src='https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/A4253ECDDD498026AF9D2263465EA23E729147B36EB3E1EAEE0A2C0909DED818/scale?width=400&aspectRatio=1.78&format=jpeg'/>
-
-</Link>
-
-</Wrap>
-<Wrap>
-
-<Link to="/">
-  <img src=''/>
-
-</Link>
-
-</Wrap>
-<Wrap>
-
-<Link to="/">
-  <img src=''/>
-
-</Link>
-
-</Wrap>
-
-
-</WrapperContent>
-
+      <h4>New</h4>
+      <WrapperContent>
+        {movies &&
+          movies.map((movie, key) => (
+            <Wrap key={key}>
+              {movie.id}
+              <Link to={`/detail/` + movie.id}>
+                <img src={movie.cardImg} alt={movie.title} />
+              </Link>
+            </Wrap>
+          ))}
+      </WrapperContent>
     </Wrapper>
-
-
-
   );
-
 };
+
+
 
 export default NewDisney
 

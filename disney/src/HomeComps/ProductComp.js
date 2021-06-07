@@ -8,7 +8,7 @@ const ProductComp = (props) => {
 <InnerWrap>
 
 <img src="/images-20210504T142301Z-001/viewers-disney.png"/>
-<video autoPlay={true} loop={true} playsInLine={true}>
+<video autoPlay={true} loop={true} playsInline={true}>
   <source src="/videos-20210504T142307Z-001/videos/1564674844-disney.mp4" type='video/mp4'/>
 
 </video>
@@ -17,7 +17,7 @@ const ProductComp = (props) => {
 <InnerWrap>
 
 <img src="/images-20210504T142301Z-001/viewers-pixar.png"/>
-<video autoPlay={true} loop={true} playsInLine={true}>
+<video autoPlay={true} loop={true} playsInline={true}>
   <source src="/videos-20210504T142307Z-001/videos/1564676714-pixar.mp4" type='video/mp4'/>
 
 </video>
@@ -27,7 +27,7 @@ const ProductComp = (props) => {
 
 <img src="/images-20210504T142301Z-001/viewers-marvel.png"/>
 
-<video autoPlay={true} loop={true} playsInLine={true}>
+<video autoPlay={true} loop={true} playsInline={true}>
   <source src="/videos-20210504T142307Z-001/videos/1564676115-marvel.mp4" type='video/mp4'/>
 
 </video>
@@ -38,7 +38,7 @@ const ProductComp = (props) => {
 
 <img src="/images-20210504T142301Z-001/viewers-starwars.png"/>
 
-<video autoPlay={true} loop={true} playsInLine={true}>
+<video autoPlay={true} loop={true} playsInline={true}>
   <source src="/videos-20210504T142307Z-001/videos/1608229455-star-wars.mp4" type='video/mp4'/>
 
 </video>
@@ -48,7 +48,7 @@ const ProductComp = (props) => {
 
 <img src="/images-20210504T142301Z-001/viewers-national.png"/>
 
-<video autoPlay={true} loop={true} playsInLine={true}>
+<video autoPlay={true} loop={true} playsInline={true}>
   <source src="/videos-20210504T142307Z-001/videos/1564676296-national-geographic.mp4" type='video/mp4'/>
 
 </video>

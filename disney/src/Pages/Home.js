@@ -6,10 +6,9 @@ import Recommend from '../HomeComps/recommended';
 import NewDisney from '../HomeComps/NewDisney+';
 import Originals from '../HomeComps/Originals';
 import Trending from '../HomeComps/Trending';
-import db from '../firebase';
-import {setMovies} from '../features/movies/movieSlice'
-import {selectUserName} from '../features/userSlice'
-
+import db from '../firebase.js';
+import {setMovies} from '../features/movies/movieSlice';
+import {selectUserName} from '../features/userSlice';
 import {useEffect} from 'react';
 import{useDispatch, useSelector} from 'react-redux';
 
@@ -23,7 +22,7 @@ const Home = (props) => {
 
   useEffect(() => {
     console.log("hello");
-    db.collection("movies").onSnapshot((snapshot) => {
+    db.collection('movies').onSnapshot((snapshot) => {
       snapshot.docs.map((doc) => {
         console.log(recommends);
         switch (doc.data().type) {
@@ -45,16 +44,21 @@ const Home = (props) => {
         }
       });
 
-      dispatch(
-        setMovies({
-          recommend: recommends,
-          newDisney: newDisneys,
-          original: originals,
-          trending: trending,
-        })
-      );
-    });
-  }, [userName]);
+
+    dispatch(setMovies({
+      recommend: recommends,
+      newDisney: newDisneys,
+      original:originals,
+      trending:trending,
+
+
+
+    })
+  );
+});
+},[userName]);
+
+
 
 
   return (
