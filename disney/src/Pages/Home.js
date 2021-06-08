@@ -80,7 +80,6 @@ const Home = (props) => {
 export default Home
 
 const Wrapper = styled.div`
-
 position: relative;
   min-height: calc(100vh - 250px);
   overflow-x: hidden;
@@ -96,7 +95,4 @@ position: relative;
     opacity: 1;
     z-index: -1;
   }
-
-
-
 `

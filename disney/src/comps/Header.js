@@ -75,7 +75,7 @@ const setUser = (user) => {
 
   return (
 
-  <Wrapper>
+  <Wrapper >
 
 <DisneyLogo>
 
@@ -196,6 +196,8 @@ padding: 0 36px;
 margin-top:6px;
 letter-spacing:16px;
 z-index:3;
+
+
 
 
 
